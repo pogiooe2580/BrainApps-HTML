@@ -4,3 +4,6 @@ index.html was supposed to be BrainApps.html, but I had to rename it so it would
 Update details: 4th release, Bug fixes, added version watermark, threw in .sb3 file of the project, modified the HTML a little.
 BrainApps is an app for Android, iOS, Windows, macOS, and Linux. iOS is still WIP. the Mobile Apps version of the project are automatically updated, but if you downloaded the HTML or PC Executables, those aren't automatically updated and you have to pay attention to update announcements in the discord server.
 FIRE UPDATE COMMING!!! On 5th version, it will have an intagrated IQ test option. ARE YOU READY?!
+
+Links:
+Scratch project page: https://scratch.mit.edu/projects/1350894231/
