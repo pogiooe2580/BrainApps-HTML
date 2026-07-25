@@ -7,3 +7,4 @@ FIRE UPDATE COMMING!!! On 5th version, it will have an intagrated IQ test option
 
 Links:
 Scratch project page: https://scratch.mit.edu/projects/1350894231/
+Discord: https://discord.gg/fkdY9dk2jT
