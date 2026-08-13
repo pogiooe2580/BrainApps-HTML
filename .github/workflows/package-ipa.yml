@@ -1,0 +1,40 @@
+name: Package APP as IPA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find APP
+        id: app
+        run: |
+          APP=$(find . -type d -name "*.app" | head -n 1)
+
+          if [ -z "$APP" ]; then
+            echo "No .app found."
+            exit 1
+          fi
+
+          echo "Found: $APP"
+          echo "path=$APP" >> "$GITHUB_OUTPUT"
+
+      - name: Create IPA
+        run: |
+          rm -rf Payload
+          mkdir Payload
+
+          cp -R "${{ steps.app.outputs.path }}" Payload/
+
+          zip -qry BrainApps.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: BrainApps-IPA
+          path: BrainApps.ipa
